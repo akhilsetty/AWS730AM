@@ -1,0 +1,71 @@
+S3 : Simple Storage Service : 
+
+--> Object Based : S3 : We can store flat files.. .pdf, .docx, .exe, .mp3..
+--> Block Based : EBS / Instance Store (ec2) : Designed to install OS.. 
+--> Storage over the Network / NAS (ec2) : 
+
+--> S3 is Object based storage.
+--> Stores data in buckets. 
+--> S3 is a global platform.
+--> We create buckets in required region.
+--> Soft Limit : 100 Buckets.
+--> Bucket names should be unique.
+--> Naming Limitations (DNS Naming standards)
+	--> Charactors Min: 3, Max 63 Char
+	--> Should not start with .  / End with . / No .. 
+	--> Should not contains any capital letters. 
+	--> Should not resemble IP address format.
+ 
+Standard URL: 
+https://s3.regionanme.amazonaws.com/bucketname/objectname
+https://s3.ap-south-1.amazonaws.com/avinash72/IAM.txt
+
+
+Virtual Path: (Not works always.. Works when we don;t have . in bucket names)
+https://bucketname.s3.regionname.amazonaws.com/objectname
+https://bucketname.s3.amazonaws.com/objectname
+
+https://avinash72.s3.ap-south-1.amazonaws.com/IAM.txt
+https://avinash72.s3.amazonaws.com/IAM.txt
+
+--> If you want to make any object publicly accesable, First Disable "Block oublic access" permission on bucket level. 
+THen, Change the Object level permissions.. 
+
+Free Tier : 5 GB Standard Storage/ Month.. 2000 PUT and 20,000 GET operations.. 
+
+Gdrive:				s3
+
+Plan 100 GB			No Pre PRovisioning required. 
+
+10 gb daily			S3-Standard (Freq Accessed Data)
+10 gb less freq. 		S3 Stanadrd-IA / OneZone-IA
+20 gb Archieve			S3 Glacier / Glacier Deep Archieve 
+10 gb reproduce the data	RRS (Reduced Redundancy Storage)   (Not Recommended)	
+10 gb unknown access pattern	S3 Intelligent Tiering (Auto Tiering happens)
+
+Availability : 			AZ
+Standard: 99.99%		>= 3
+IA : 99.9%			>= 3
+OneZone-IA : 99.5%		1 AZ
+Glacier / Deep : 99.99%		>=3
+S3 Intelligent Tiering		>= 3
+
+Durability : 99.999999999 % Durability (Except RRS) (RRS 99.99%) (11 9's)
+
+
+
+Versioning :
+--> Versioning will be in "Suspended" state by defaultly.
+--> We can track all the changes happening on our files.
+--> We will get a version ID for every upload. We cannot manage Version ID. 
+--> Uploaded time is Imp.. (Most recent upload called as Latest Version)
+
+
+
+
+
+
+
+
+
+

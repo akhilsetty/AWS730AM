@@ -1,0 +1,378 @@
+AWS : Prog Exp : No Prior required
+Code : No Coding : 3-4 Yrs Coding not required.. 
+
+Linux Knowledge : Yes.. : Free Linux Course.. 
+
+Prior Experience : No.. Learn from Scratch.. 
+
+AWS Administrator / AWS SysOps Administrator : Linux/Windows.. --> Learn AWS
+AWS Solutions architect : On-Premise services : --> Learn AWS
+AWS Developer : 3-4 Yrs Exp : No coding.. Must have knowledge on any of the prog.. Cloudformation/Lambda : 7-9 Yrs : JSON/YAML
+
+AWS DBA : DB Admins + Learn AWS --> 
+AWS Network Specialist : Network Admins + Learn AWS --> 
+AWS BigData Specialist : Bigdata (EMR / Cloudera/ Hortonworks) + Learn AWS --> 
+AWS AI/ML : AI/ML/DS + Learn AWS --> 
+
+
+IAM --> User Management
+S3 --> Storage Management
+ec2 --> Server part
+Route53 --> Hosting
+VPC --> Networking
+RDS --> Database
+Security Services 
+Application Services
+Whitepapers
+Resume Keypoints
+
+98% Hands-On --> 
+
+VM From On-prem to AWS
+DMS
+Storage Gateway
+DataSync
+
+
+3-4 Yrs Experience.. 
+
+DevOps also --> SHare you free Course on Jenkins+git+maven --> AWS 
+
+
+4 Certifications : 
+
+
+
+____________________________________________________________________________________
+
+D: 10/04/2020
+
+DEPLOYMENT MODELS :
+
+Public cloud : Open for all.. Anyone can create account and provision the resources.
+EX: AWS, Azure, GCP, Alibaba Cloud, Oracle Cloud.. 
+Maintenance : Service Provider.. 
+
+Private cloud : Dedicated for one organisation.. 
+Main: Same Org may have dedicated team / 3rd party org.. 
+
+Hybrid cloud : Public + Public / Public + private.. 
+AWS + Azure / Azure + GCP / AWS + GCP + Azure ....  On-Premise + AWS (VPN/DC/BOVPN).. 
+Main : Your org / Service Provider / 3rd party.. 
+
+Community cloud : Group of organizations build the DC/ Infrastructure.. 
+Main : One of the community member / 3rd party org
+
+_________________________________
+
+Service Models of the Cloud Computing : 
+
+Traditional Computing / On-Premise:  (Efferts + Operational cost + Maintenance cost)
+
+Application		--> Developers dev --> End user
+Data			--> SA
+Middleware		--> App Admins
+runtime
+Operating system	--> Sys Admins
+Virtulisation		--> Vmware/hyper-v/kvm 
+Servers			--> System Enginees / Admins 		
+Database		--> DBA
+Storage 		--> SAN / NAS (5 TB)
+Network 		--> Network Engineers (Switches, Routers, Firewalls..)
+
+Power connectivity (UPS)
+Cooling systems 
+Flooring
+Server Rack / Network rack
+
+
+--> SaaS : Software as a Service : 
+--> PaaS : Platform as a Service : 
+--> IaaS : Infrastructure as a Service : 
+
+
+Shared Responsibility Security Model
+
+Security OF the cloud : AWS
+Security IN the cloud : WE
+
+______________________________________________________________________________________
+
+D: 11/04/2020
+
+AWS : Amazon Web Services : 
+2003
+--> Chris Pinkman and Benjamin Black.. Designed whitepapers.. SQS (Simple Queue Service)
+
+2006 : AWS Launched.. SQS, S3 and EC2.. 
+CEO of AWS : Andy Jessy.. 
+
+2012 : AWS Annual COnference : AWS Re:Invent.. (CP Certification Q)
+
+
+12 Months Free Tier : 
+AWS Account is Free to create..
+
+https://aws.amazon.com/free
+
+S3 : Simple Storage Service : Storage / AWS Version of GDrive.. 
+EC2 : Elastic Compute Cloud : Server..				
+RDS : Relational Database Service : Database.. 			
+VPC : Virtual private Cloud : Network in AWS.. 			
+
+
+S3: 5 Gb Standard Storage.. 2000 PUT (Upload) / 20,000 GET (Downloads) per Month..
+
+EC2 : 750 Hours / Month t2.micro Windows... 1 Server = 1 Month..  
+	750 Hours / Month t2.micro Linux 
+
+RDS : 750 Hours/Month db.t2.micro.. 1 RDS Server = 1 Month.. 
+
+
+AWS Global Infrastructure:  (CP:2Q / SA: 1Q)
+
+Region : Physical / Geographical location.. 22 Regions..  No technical defination for Region.. 
+
+Mumbai : ap-south-1
+NV : us-east-1
+
+18 Regions for everyone.. 
+2 Region : Us-Gov-Cloud.. SignUP
+2 Regions : China Region (NWCD & Sinnet).. SignUP
+
+
+Availability Zone : Data Centre / Combination of multiple DC Designed to run all the compute loads of AWS, Every AZ is designed to isolate the failure of Another AZ.. 
+
+Every Region Contains Min of 2 AZ.. 
+
+
+Edge Location / Point of Presence : CDN (Content Delivery Network) Endpoints / Cached location.. Application/Data/Website Cached in Edge location..  
+ 
+
+https://www.infrastructure.aws/
+
+https://avinash69.s3.ap-south-1.amazonaws.com/AWS72.txt
+
+
+______________________________________________________________________________________
+
+D: 13/04/2020
+
+Email address : Using to create our AWS account : ROOT Account/User.. 	
+Password & Confirm Password
+Account Name
+
+root user : Administrator
+IAM user : We can limit the access
+
+Step 2: Contact Information						
+--> Profesisonal
+--> Personal
+Enter the contact information
+
+Step 3 : Valid Payment information
+
+Accpets CC/DC.. Visa / Master Card / AMEX..				 
+Verify the card status.. 1$/ 2 INR / Refund.. 
+
+Step 4 : Verify the identity
+
+--> Email
+--> Phone verification
+
+Captcha.. Enter your Ph number.. You'll get a call from AWS IVR.. XXXX (screen) --> Enter this XXXX pin in that call.. 
+
+Step 5 : Choose the Support Plan.. (CP / SA / SysA)
+
+1. Account and Billing related query : 24x7, 365 Days support.. all SP will get this..
+2. Service Limit increase query: 24x7, 365 Days support.. all SP will get this.. 
+3. Technical Support : Depends on the Support plan we have.. 
+
+
+Basic SP 	: Cost : Free.. 3 --> No Technical Support.. KB articles/ AWS technical forums/ AWS Documentations.. 7 core checks from TrustedAdvisor
+
+Developer SP 	: Cost : 29$/Month.. 3 --> 12-24 local business hours..  unlimited cases / 1 primary contact..  local business hours Only email support to Cloud support Associate.. 7 core checks from TrustedAdvisor
+
+Business SP 	:  Cost : 100$/Month.. 3 --> Prod system down < 1 hr..  Prod Sys < 4 Hrs.. 24x7 Phone, email / chat support to Cloud Support Engineer..  unlimited cases / any user can raise ticket.. all checks from TrustedAdvisor
+
+Enterprise SP 	: Cost : 15,000$/Month.. 3 --> Business critical <15 Min.. Prod system down < 1 hr..  Prod Sys < 4 Hrs.. 24x7 Phone, email / chat support to Cloud support engineer..  Dedicated TAM (Technical Account manager).. Infrastructure review.. Conceirge support team.. AWS Shield Advanced included.. all checks from TrustedAdvisor
+
+DDoS : Edge Locations (Cloudfront) 
+
+Billing Preferences: 
+
+
+Task : Create an AWS Account..
+
+Task 2 : Create a Billing alert to get a notification for >=0.50$ for 24 Hours..
+
+Trusted Advisor : 
+PHD : personal Health Dashboard
+
+_______________________________________________________________________________________
+
+D: 14/04/2020
+
+root : Email used to create aws account.. Full access/permissions on our aws account..
+IAM User : Identity and Access Management : using IAM, We can limit the user access based on his job role/ requirement. 
+
+
+Manage Servers : ec2 Full Access : ec2fullAccess
+Manage Storage : s3 Full Access  : 
+Manage Network : VPC Full Access : 
+
+TL : Administrator access : 
+Proj Manager : Manages Account / pay the bill : 
+
+
+Policy : Set of permissions on our AWS environment. Writtens in JSON format.
+
+
+root account email and password.. :
+Enable MFA : 
+
+--> Virtual MFA : Smartphones : Google Authenticator, MS Authenticator, Authy2Factor.. 
+--> Hardware MFA : purchase H/W device : 
+--> u2f key : 
+
+IAM User Creation: 
+
+Manage Servers : ec2 Full Access : ec2fullAccess
+Manage Storage : s3 Full Access  : 
+TL : Administrator access : Avinash_T : 
+
+Username : S3user
+
+Access Type : 
+--> AWS Management Console Access : GUI : Username, Pwd & Sign-in URL: Browser.. 
+--> Programatic Access : CLI : AccessKeyID & SecretAccessKey : awscli, ide, sdk, api/3rd 								party application
+
+Permissions : 
+
+From Group level
+Copy permissions from another user
+Attach policy directly
+
+
+
+Task : Enable MFA on your root account.
+
+Task 2 : Create an IAM user with Administrator access.. Login and verify his access on IAM.. and try to access Billing dashboard... (Access/Deny)
+
+Task 3 : Provide Access on Billing for Task 2 user.
+
+
+Task 4 : Create an group and associate "S3FullAccess" to group, and add couple of IAM users to the group and verify the access. 
+
+
+D: 14/04/2020
+
+root : Email used to create aws account.. Full access/permissions on our aws account..
+IAM User : Identity and Access Management : using IAM, We can limit the user access based on his job role/ requirement. 
+
+
+Manage Servers : ec2 Full Access : ec2fullAccess
+Manage Storage : s3 Full Access  : 
+Manage Network : VPC Full Access : 
+
+TL : Administrator access : 
+Proj Manager : Manages Account / pay the bill : 
+
+
+Policy : Set of permissions on our AWS environment. Writtens in JSON format.
+
+
+root account email and password.. :
+Enable MFA : 
+
+--> Virtual MFA : Smartphones : Google Authenticator, MS Authenticator, Authy2Factor.. 
+--> Hardware MFA : purchase H/W device : 
+--> u2f key : 
+
+IAM User Creation: 
+
+Manage Servers : ec2 Full Access : ec2fullAccess
+Manage Storage : s3 Full Access  : 
+TL : Administrator access : Avinash_T : 
+
+Username : S3user
+
+Access Type : 
+--> AWS Management Console Access : GUI : Username, Pwd & Sign-in URL: Browser.. 
+--> Programatic Access : CLI : AccessKeyID & SecretAccessKey : awscli, ide, sdk, api/3rd 								party application
+
+Permissions : 
+
+From Group level
+Copy permissions from another user
+Attach policy directly
+
+
+Task : Enable MFA on your root account.
+
+Task 2 : Create an IAM user with Administrator access.. Login and verify his access on IAM.. and try to access Billing dashboard... (Access/Deny)
+
+Task 3 : Provide Access on Billing for Task 2 user.
+
+Task 4 : Create an group and associate "S3FullAccess" to group, and add couple of IAM users to the group and verify the access. 
+
+_______________________________________________________________________________________
+
+D: 15/04/2020
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-dou5d7v5-kA6Val3XRzGCqYKzmD5xLw
+
+
+IAM USer : Administrator Access but not on S3 (S3 Sensitive Information).. 
+IAM : Admin Access but not on S3/ec2.. 
+
+AWS Managed Policies : 
+AWS Job function : 
+Customer Managed : 
+
+AdministratorAccess : Provides full access to AWS services and resources.
+PowerUserAccess : Provides full access to AWS services and resources, but does not allow management of Users and groups.
+ReadOnlyAccess : Provides read-only access to AWS services and resources.
+Bill : Billing Dept: 
+
+
+Service : s3
+Action : Allow/Deny  .... All Action.. 
+Resources : all
+
+Policy : Deny S3 and Ec2.. 
+allow ec2 and deny s3.. 
+
+
+Track all user activities: 
+
+Cloudtrail : Logging service on our AWS : Enabled by defaultly on all AWS accounts. Stores last 90 days logs. 
+
+
+Credentials Report : 
+
+ARN : Amazon Resource Name : 
+
+Whenever we create an AWS account, we will get a 12 Digit unique AWS account id. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,6 +15,11 @@ S3 : Simple Storage Service :
 	--> Should not start with .  / End with . / No .. 
 	--> Should not contains any capital letters. 
 	--> Should not resemble IP address format.
+
+--> Min Object Size : 0 bytes..   
+--> Max Obj size : 5 TB
+--> S3 have unlimited storage. 
+
  
 Standard URL: 
 https://s3.regionanme.amazonaws.com/bucketname/objectname
@@ -60,11 +65,41 @@ Versioning :
 --> We will get a version ID for every upload. We cannot manage Version ID. 
 --> Uploaded time is Imp.. (Most recent upload called as Latest Version)
 
+_____________________________________________________________________________________
+
+D: 17/04/2020
+
+SRR / CRR : 
+
+Task : Perform Same Region Replication with Stanadrd Storage in Source and Destination buckets.
+
+Task 2 : What is the Priority order when we apply multiple SRR/CRR. 
 
 
+LCR : Lifecycle Management Rule : 
+
+--> We can transit objects from one storage to class to another storage class automatically. / Automate the storage class transition on our objects.
+--> We can trigger to delete the objects also.
+
+Latest Version : Expire
+Previous version : Deletes Perminently
 
 
+Static Hosting : Fixed Website : 
 
+--> Domain Name = Bucket Name			Route53
+--> Index.html (Default webpage) / Error.html (Custom Errors)
+--> Make sure you give atleast "Read Only" permissions on your objects.
+
+Http Status codes:
+
+2XX --> OK/Success
+3XX --> Redirection Error
+4XX --> Client Side Error
+5XX --> Server Side Error
+
+Server access logging : 
+--> Logging feature on our s3 bucket. 
 
 
 

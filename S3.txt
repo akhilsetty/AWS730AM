@@ -101,6 +101,78 @@ Http Status codes:
 Server access logging : 
 --> Logging feature on our s3 bucket. 
 
+______________________________________________________________________________________
+
+D: 18/04/2020
+
+KMS : Key Management Service : 
+
+
+In-Transit Encryption : 
+	--> SSL / TLS
+
+Server Side Encryption / At-Rest : 
+	--> AES-256 Encryption / SSE-S3		(S3 is Responsible for Ency and Decry)
+	--> AWS- KMS Managed Key (SSE-KMS)
+	--> AWS-KMS Customer Managed Key (SSE-C)
+
+Client Side Encryption : 
+	--> Cutomer responsible
+	--> We can use this CSE along with AWS SDK tools.
+
+
+http: cc/db .. Man In Middle attack.. 
+https: Secure over http
+
+CMK : Customer Master key (CMK) is a logical representation od Master Key. THe CMK contains Metadata KeyID, Creation date, Desc, Key State. COntains Key material used to Encrypt and Decrypt. 
+
+Symmetric CMK : It's a single 256-bit secret encryption.  One key for Encry and Decry.
+Asymetric CMK : We will have public key and private key. We need both the keys to perform encry or decryp. 
+
+
+Key Administrator Permissions : 
+Key Usage Permissions : 
+
+Customer Managed : 365 Days is Key Rotation (1 year)
+AWS Managed Keys : 1095 Days (3 Years)
+AWS Owned keys : Varies (Depends on AWS)
+
+Task : Encrypt the s3 data using AES-256, upload the data and verify the status
+Create an new IAM user with S3 full Access, try to read the encrypted data and try to disable the encryption on bucket.
+__________
+
+Object Lock : We cans ecure data from deletions. Including root user also.
+--> While create bucket itself we need to enable this feature. 
+--> Versioning must be enabled. 
+
+
+Governance mode can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode cannot be disabled by any user, including the root account.
+
+
+Task : Create an Object lock on your s3 bucket and enable for 2 days. 
+	Switch to root user and try to delete the objects.
+
+_____
+
+Tags : We can give/define required metadata on our s3 bucket. Tag contains Key and Value.
+
+Transfer Acceleration : used Edge location to perform upload/download operation to given bucket.
+
+______
+
+
+Events on S3 with SNS : 
+
+S3 Events supports :
+--> SNS (Simple Notification Service) : Email Notifications
+--> SQS (Simple Queue Service)
+--> Lambda
+
+Task : Create an SNS topic, Add multiple subscribers.. Configure to get notification when an object is deleted from your s3 bucket.
+
+
+
 
 
 

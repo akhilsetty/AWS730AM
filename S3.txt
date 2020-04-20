@@ -171,6 +171,79 @@ S3 Events supports :
 
 Task : Create an SNS topic, Add multiple subscribers.. Configure to get notification when an object is deleted from your s3 bucket.
 
+________________________________________________________________________________________
+
+D: 20/04/2020
+
+Glacier Restoration : 
+Bulk retrieval : Typically within 5-12 hours.
+
+Standard retrieval : Typically within 3 - 5 hours
+
+Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
+
+____
+
+ACL : Access Control List :     
+
+Bucket Policy : Written in JSON. 
+
+
+Service Name : S3
+
+Effect : Allow / Deny : DENY
+Principal : TO what IAM User / Group you want to apply the effect.: arn:aws:iam::518084852393:user/s3user
+
+Action : UploadPut//get/bucketacl : 
+
+ARN : On what bucket you want to apply the Effected actions.. 
+
+
+CORS : Cross Origin Resource Sharing : 
+
+Analytics : Storage class analysis : 
+
+Metrics : Cloudwatch : Monitor the resources , GIves report in Graphical format.. 
+
+___________________________
+
+
+50TB Data On-Premise : 
+ 
+AWS Snowball : 50 TB / 80 TB : 200$/job.. 10 Days Free.. 
+AWS Snowball edge : 100 TB : 250$/Job.. 10 Days Free..
+AWS Snow Mobile : PB Scale container.. 
+
+__________________________
+
+Manage S3 using 3rd party applications : 
+--> Cloudberry explorer
+--> S3 Browser
+--> CyberDuck
+--> WinSCP
+
+
+Task : Install S3Browser and maange s3 platform
+Try CLoudberry explorer application. 
+
+Read S3 FAQs.. 
+
+
+Performance of S3..?? 
+
+3,500 Req/Sec to add the Data.. 
+5,500 Req/Sec to Read/retrive data.. 
+
+
+Task : How to improve this performance..?? 
+
+
+
+
+
+
+
+
 
 
 

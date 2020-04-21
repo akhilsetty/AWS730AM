@@ -1,0 +1,73 @@
+EC2 : Elastic Compute Cloud : 
+		CPU, Memory, Storage, Network, Applications/softwares
+		
+
+Purchase a server : 1M.. (32CPU, 128GB RAM, 6TB HDD, Intel Xeon) --> Quotation --> Dell/hp/lenovo.. Dell --> Pricing --> Release PO with 100% Advance.. 3-4 Delivery time --> NBD --> Service Tag --> Mount it --> OS Installation --> Application installation -->  UAT --> Prod			5-10 Weeks
+
+Server Rack
+Network Rack
+Cooling system
+UPS
+
+++ 10M : 
+-- 10k : 
+
+Vertical Scaling : | 
+Horizontal Scaling :  --> | | | 
+
+Capital Expendeture : Investing first.. ROI
+Operational Expendature : Every month operations.. 
+
+__________________________________________________________________
+
+EC2 : Pay-as-you-go : 
+Pay-as-you-grow : 
+
+
+Instance : 
+
+
+On-Demand EC2 Instance : Unpredictable workload, No stable usecases... Pricing : /hr, /sec... 
+--
+Reserved Instances : Stable / predictable workloads for specific durations i.e; 1 Yr/3 Yrs.. Commitment with AWS.. 
+
+16vCPU, 32 RAM.. 3 Years.. 
+
+	Standard RI : We cannot change the configuration.. 
+	Convertable RI : We can change the config.. 
+	Scheduled RI : Persistant/ repeatable durations.. 
+
+Pricing : Full Upfront : Pay 100% while purchasing.. 
+	  Partial upfront : Pay (30-50%) some amount now.. Remaining monthly basis..
+	  No Upfront : Pay monthly basis.. 
+--
+Spot Instances : If we have Flexible start/stop times for our server.. We need to bid our price against aws price.. We can get High config server at low cost.. 
+
+1$/hr --> 0.50$/Hr We got our server --> 1 Hr 35 Min --> Price not increased and , we terminated --> 1 Hr 35 Min we will get cherged for entire duration.. 
+
+If price increased and AWS terminated the instance, We billg et charged for Full Hours, not for the partial hours.. 
+
+--> Pricing History
+--> Spot Fleet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

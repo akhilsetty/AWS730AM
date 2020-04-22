@@ -50,14 +50,72 @@ If price increased and AWS terminated the instance, We billg et charged for Full
 --> Pricing History
 --> Spot Fleet
 
+_______________________________________________________________________________________
+
+D: 22/04/2020
+
+EC2: 1. Mumbai	2. N.V
+
+Launching an EC2 Instance : 
+
+Step 1: Choose an AMI (Amazon Machine Image)(Template of an OS with required services/applications)
+
+Linux : Amazon Linux, Suse, Redhat, CentoS, KaliLinux.....  
+Windows : 2012, 2012R2, 2016, 2019
+
+QuickStart: Brandnew AWS Managed AMIs.
+MyAMI : We can CUstomise AMIs.
+AWS MarketPlace : Where we can buy appliances from diff Organizations.. 
+
+Step 2: Choose an Instance Type (Selecting Configuration) (vCPU, Memory, Network Perf)
+
+General Purpose : Balanced performance : A1, T2, T3, T3a, M4, M5, M5n
+Compute Optimized : CPU :  Best professor performances : C4, C5, C5n
+Memory Optimized : RAM : Best RAM perf : R4, R5, R5n/a, X1, X1e
+Storage Optimized : Best HDD/SDD Perfor : D2, i3, i3en
+GPU Optimized : Best Graphic perf : P2, P3, G3, G4
+FPGA : Field Programable gate array : f1
+ML ASIC : Application Specific Integrated circuit: inf1
+
+Step 3: Configure Instance Details
+
+Number of instances : 1
+Shutdown behavior : Stop/Terminate : STOP
+Enable termination protection : YES
+
+Step 4: Add Storage
+Window : 30GB
+Linix : 8gb / 10gb
+
+Step 5: Add Tags
+--> Max we can add 50 Tags/Instance
+
+Step 6: Configure Security Group
+
+Security Group : Firewall at Instance level, We can filter the traffic.. 
+
+0-65535 : Port / Protocols : 
+Windows OS : RDP : 3389 : 
+Linux OS : SSH : 22 : putty
+
+Source : 0.0.0.0/0, ::/0 --> Opened for everyone
+My IP : Picks Currently connected network Public IP 
+
+AWS Keeps --> Public Key		--> lock
+AWS Gives --> .pem file (Private Key)	--> Key
 
 
+Pending --> RUnning --> Stopping --> Stopped
+					|
+					V
+Pending --> RUnning --> Shutdown --> terminate
 
 
+Task 1 : Launch a windows ec2 instance. Connect --> Change the password for "Administrator". --> Disconnect --> Try to connect using Keypair generated password.. 
 
+Task 2 : Create a new user "Yourname", and provide RDP permissions to get connected to our instance. 
 
-
-
+Task 3 : Provide local admins rights/ elivated permissions to newly created user. 
 
 
 

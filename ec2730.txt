@@ -117,15 +117,42 @@ Task 2 : Create a new user "Yourname", and provide RDP permissions to get connec
 
 Task 3 : Provide local admins rights/ elivated permissions to newly created user. 
 
+_______________________________________________________________________________________
+
+D: 23/04/2020
 
 
+EC2 : 750 Hours/Month, t2.micro WIndows.. 1 Month =1 instance..
+	750 Hrs/Month, t2.micro Linux instnce..  
+
+Security Grpups are stateful.
+We always needs to take care about inbound rules in SG.
+ALl outbound traffic allowed by defaultly. (Instance accepts all the traffic)
+Changes to SG takes effect immediatly. No need to stop/start/reboot.
+
+Security groups allows the traffic. We cannot deny the traffic.
+
+RDP : 3389
+SSH : 22
+http: 80
+Https : 443
+MSSQL : 1433
+MySQL : 3306
 
 
+Can we deny any traffic using SG.? NO
+
+TO upgrade/diwngrade the instance type, We need to stop the instance first. 
+
+EIP : Elastic IP : Dedicated IP address for our AWS account in a specific region. 
+(NO FREE TIER ELIGIBILITY)
+
+ENI : Elastic Network Interface : 
 
 
+Task : Ping your ec2 instance by opening required ports on SG. 
 
-
-
+Task 2 : Launch another ec2 instance, and test the website output from newly launched ec2 instance using privateIP. 
 
 
 

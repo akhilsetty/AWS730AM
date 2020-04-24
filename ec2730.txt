@@ -150,9 +150,90 @@ EIP : Elastic IP : Dedicated IP address for our AWS account in a specific region
 ENI : Elastic Network Interface : 
 
 
-Task : Ping your ec2 instance by opening required ports on SG. 
+Task : Ping your ec2 instance by opening required ports on SG.(ICMP: Echo reply/request)
 
 Task 2 : Launch another ec2 instance, and test the website output from newly launched ec2 instance using privateIP. 
+
+__________________________________________________________________________________
+
+D: 24/04/2020
+
+Root Device types:
+1. Instance store : 
+	--> Also called as a ephemeral storage. 
+	--> We cannot stop/start the instance.
+	--> If underlying instance failure happens, we loss all the data.
+	--> We do have 3rd party applications to migrate Instance store volumes to EBS 	
+		(NetApp)
+
+2. EBS (Elastic Block Storage): 
+
+root volume types: 
+	--> General Purpose SSD : gp2
+	--> Provisioned IOPS : io1
+	--> Magnetic : standard
+additional volumes
+	--> THroughput optimised HDD : st1
+	--> COld HDD : sc1
+
+IOPS : Input and Output operations per second.. 
+
+
+GP2 : Min 1 GB, 16 TB.. Dev/Test Env, Low latency interactive applications.. Used for lot of transactional worklods..  Max IOPS : 16,000...  1 GB = 3 IOPS, With min of 100, Bustable upto 3000... 
+
+io1 : Min 4 Gb, Max 16 TB.. I/O Intensive NoSQL/ Relational Databases. Latency sensitive transactional workloads.. If you need specific iops count for your application..  Highestb performance SSD..  Max IOPS : 64,000... 1GB = 50 IOPS.
+But We can specify our required IOPS count.. 
+
+Magnetic/standard : Min 1 GB, Max 1 TB.. Lowest storage for our instance.. Less freq accessed data.. IOPS N/A.. 
+
+
+Throughput optimized HDD : MIn 500 GB, Max : 16 TB.. Low cost HDD for Freq, accessed dat for BigData / Warehousing/ log processing applications.. IOPS : 500.. 
+THoughput: 500MB/s
+
+Cold HDD : MIn 500 GB, Max : 16 TB.. Lowest cost HDD volume for Less freq accased data.. Data required only fewer scans per day.. IOPS: 250.. THoughput: 250 MB/s
+
+
+Free :  30 GB of EBS General Purpose (SSD) or Magnetic storage.. 
+
+
+Delete on Termination : If we Terminate our ec2 instance, THis volume also deletes automatically. (Option selected)
+
+_______________________________________
+
+Snapshot: Backup option for our EBS volumes. 
+
+--> AWS uses S3 platform to store the snapshots  (AWS owned S3 platform)
+--> We can automate the Snapshot process using DLM (Data Lifecycle Manager)
+--> Snapshots creates in Incremental manner.
+--> We required only latest snapshot to restore. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

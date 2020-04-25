@@ -207,12 +207,41 @@ Snapshot: Backup option for our EBS volumes.
 --> Snapshots creates in Incremental manner.
 --> We required only latest snapshot to restore. 
 
+________________________________________________________________________________
+
+D: 25/04/2020
+
+DLM : Data Lifecycle Manager : Based on Tags.. 
+
+CLoudwatch Events : We can create Snapshots.. : Based on Volume ID.. 
+
+CustomAMI / GoldenAMI : 
 
 
+1 Instance = Required standards/applications.. --> Create an Image (MyAMI)
+
+50 ec2 instance.. IIS, Internal APplications, Pdf, AV, MSOffice, Putty, CustomWP..
 
 
+Linux Insatnce :
+
+Windows : Putty, Enable OpenSSH and use Command prompt, Install GIt and use GIt bash, MobaXterm.. 
+Linux/Mac: Terminal
+
+SSH : Secure Shell : Port:22.. 
 
 
+Putty accepts only .ppk format keypair.. 
+	--> Either create a keypair with .ppk in aws
+	--> Convert the PEM file format to PPK using PuttyGen.. 
+
+
+ls
+ssh -i LinuxKP.pem ec2-user@13.233.178.3
+
+
+Task: Practice Instance launch, VOlumes, snapshot and GoldenAMI with Windows Isntance
+Task 2 : Launch Linux instance get connect to it. 
 
 
 

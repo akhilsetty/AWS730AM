@@ -1,0 +1,52 @@
+ec2-user is default username for amazon Linux.
+whoami 		--> TO know as what user you are working.
+sudo su		--> Switch to root user
+
+rpm		--> RedHAt package manager
+yum 		--> Yellowdog Update manager
+
+yum update		--> TO install pathes on ec2 instance 
+yum install httpd	--> TO install apache 
+
+yum install httpd -y
+service httpd start	(status/stop/restart)
+chkconfig httpd on	--> TO make httpd as a logon service (Starts 				service automatically)
+
+/var/www/html/ create an index.html file... 
+
+
+Winscp	: Cross OS file transfer application.. 
+
+vi, nano, vim.. 
+
+VIM Editor: 
+
+vim filename	--> TO edit the file
+
+I	--> INSERT
+Esc	--> Comeout from INSERT Mode/ReadOnly
+:wq	--> Write the data to file and Quit
+:q!	--> Quit without writing the data.
+
+____________________
+
+/dev/xvdf /home/ec2-user/newvolume xfs rw,relatime,attr2,inode64,noquota 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

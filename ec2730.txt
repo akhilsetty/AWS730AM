@@ -244,12 +244,94 @@ Task: Practice Instance launch, VOlumes, snapshot and GoldenAMI with Windows Isn
 Task 2 : Launch Linux instance get connect to it. 
 
 
+______________________________________________________________________________________
+
+D: 28/04/2020
+
+Metadata : 
+
+Userdata : We can pass the command while launching the instance. We can automate some tasks by using this Userdata / BSS.
+
+Foe Linux Instance : 
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is a BSS Website</h1>" >> /var/www/html/index.html
+
+For Windows Instances: 
+
+<script>
+echo System Rebooted at this date and time >> %SystemRoot%\Temp\test.txt
+echo %DATE% %TIME% >> %SystemRoot%\Temp\test.txt
+</script>
+<persist>true</persist>
+
+Executes after every reboot : <persist>true</persist>
 
 
+Metadata : 
+Metadata service version 1 : a Request/response method
+Metadata service version 2 : a Session-oriented method
+
+For Linux : curl http://169.254.169.254/latest/meta-data/
+Open Browser : http://169.254.169.254/latest/meta-data/
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+events/
+hibernation/
+hostname
+identity-credentials/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4
+public-keys/
+reservation-id
+security-groups
+services/
+
+________________________________________
+
+Cloudwatch : Service to monitor the resources.. 
+
+Instances : CW have 2 types of monitorings:
+--> Basic Monitoring : Interval 5 Min
+--> Detailed Monitoring / Enhanced Monitoring : Interval 1 Min
+
+Using CW, We can monitor CPU, Network, Disk, Status checks..  We cannot monitor MEMORY (RAM) utilisation using Defualt metrics.. 
+
+TO monitor Memory on ec2 instance, Install Unified CW agent.. 
 
 
+Status Checks : 
+--> System Status checks.. : Stop/start.. add additional NIC card as a temp fix.. 
+--> Instance Status checks.. : Reboot
 
 
+__________________________________
+
+Vertical Scaling : 
+Horizantal Scaling : 
+
+
+ELB : Elastic Load Balncer : 
+--> 1. Classic ELB : TCP, SSL/TLS, Http, Https.. Previous Generation.. 
+--> 2. Application ELB : Http, Https.. 
+--> 3. Network ELB : TCP, UDP, TLS/SSL
+
+
+Task : Using userdata make instances as webservers.. (Launch instances in 1a and 1b) COnfigure Classic ELB to deliver the website.
 
 
 

@@ -350,8 +350,6 @@ echo "<h1>This is web server 8080</h1>" >> /var/www/html/index.html.
 WebserverSG : For all web servers
 ELB SG: For ELB
 
-
-
 SG: 
 --> Create a SG for Web Servers and Another SG for ELB. 
 
@@ -365,6 +363,61 @@ Task : COnfigure ELB with discussed settings. (SG)
 Task : COnfigure multiple web servers and practive Classic, Application ELB / Network ELB.. 
 
 Read FAQ's on ELB.. Comparison chart.. 
+
+
+Layer 4 : Network ELB
+Layer 7 : Application 
+
+
+Path Based Routing.?
+Path based routing
+
+Load balancing to multiple ports on ec2 instance.?
+Application and network elb
+
+For what ELB, we are allowed to define EIP/IP.?
+Network
+
+______________________________________________________________________________________
+
+D: 30/04/2020
+
+ASG : Auto Scaling Group : 
+
+--> Create an AMI
+--> Create an ELB 
+--> Create an ASG
+	--> Create a Launch COnfiguration
+	--> Create an ASG
+
+
+ScaleIn : Remove instances
+ScaleOut : Adding Instances
+
+Application to test load on our instances: Bees with machine guns
+
+
+Task: Configure ASG and test schedule scaling.
+
+What is cooldown period.?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

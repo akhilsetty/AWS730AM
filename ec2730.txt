@@ -401,10 +401,58 @@ Task: Configure ASG and test schedule scaling.
 
 What is cooldown period.?
 
+_______________________________________________________________________________________
+
+D: 01/05/2020
+
+Cloudwatch : 
+Basic : 5 Min
+Detailed : 1 Min
+
+We can create Dashboards.. 
+Events
+Logs : We can store VPC Flowlogs and Labda logs in Cloudwatch logs feature.
+
+
+2 ec2 instances.. CPU
+2 RDS instances..
+10 s3 buckets.. 
+2 elb.. 
+
+
+INPUT PATH:
+
+{"instance-id":"$.detail.instance-id", "state":"$.detail.state", "time":"$.time", "region":"$.region", "account":"$.account"}
+
+INPUT TEMPLATE: 
+
+"At <time>, Status of your EC2 instance <instance-id> in the AWS Region <region> has changed to <state>."
 
 
 
 
+____
+
+Linux : EFS
+Windows : FSx
+
+EFS : Elastic File System :
+--> Works with NFS v4.1 protocol.
+--> We can mount only to Linux instances.
+--> Create an EFS, we will get a DNS name, Using DNS name we can mount the EFS.
+--> We can mount EFS to Same region , same VPC resources / Another VPC Resources (VPC Peering) / On-Premise resources (VPN/DC).
+--> permissions needs to managed at Object level.
+--> We can configure automatic backups also.
+--> Infrequently access also available to save cost.
+--> No-Preprovisioning required.
+--> All data stores in SSD.
+
+--> Add entry in /etc/fstab file for permanent mount.    (cay /etc/mtab --> Get related entry and add same in fstab file)
+
+
+Task : COnfigure notification on your ec2.
+Task 2 : Create an EFS, Mount it to an ec2 instance while launching. 
+Task 3 : Launch 2 instance in 2 diff AZs, and make thes einstances as web servers and mount EFS to public Doc path, deliver the data from EFS. 
 
 
 

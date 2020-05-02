@@ -455,6 +455,46 @@ Task 2 : Create an EFS, Mount it to an ec2 instance while launching.
 Task 3 : Launch 2 instance in 2 diff AZs, and make thes einstances as web servers and mount EFS to public Doc path, deliver the data from EFS. 
 
 
+_______________________________________________________________________________________
+
+D: 02/05/2020
+
+IAM User : 
+--> Management console access : Username, Password & Sign-In
+--> Programatic Access : Accesskey ID and SecretAccess Key
+
+http://aws.amazon.com/cli
+
+aws --version 		--> To know installed cli version
+aws configure 
+accesskey , Secretaccess key, Region and Defaultoutput 
+
+aws s3 ls
+aws s3 ls s3://bucketname
+aws s3 cp source destionation
+aws s3 sync source destination
+
+--recursive
+
+Roles : Perform task onbehalf of us.
+
+
+Task : Launch an ec2 instance using cli. 
+Task 2 : Perform cross account access if you have multiple AWS account.
+Task 3 : get data from s3 bucket to ec2 instance and deliver it as webpage.
+Task 4 : Create an IAM user using CLI. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

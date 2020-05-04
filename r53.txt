@@ -1,0 +1,20 @@
+Route53 : We needs a domain name.. Cost us.. 
+
+AWS DNS service.. DNS runs on port 53
+
+ec2 : public IP : 
+ELB : DNS Name : avinash.website
+Elbs : DNS Name :
+
+DNS : maps (FQDN) Domain names to IP Address and vice versa.. 
+Public IP: Unique across the globe.. 
+
+
+Domain Registrers: GOdaddy, aws r53, google dns..  
+ICANN : Domain uniqueness.. 
+IANA : Maintains rootzoneDB..  .com, .in, .gov, .us.. 
+
+freenom.com : Where you can get a free domain name.. 
+
+
+

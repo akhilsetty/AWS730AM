@@ -485,13 +485,30 @@ Task 3 : get data from s3 bucket to ec2 instance and deliver it as webpage.
 Task 4 : Create an IAM user using CLI. 
 
 
+_______________________________________________________________________________________
+
+D: 04/05/2020
+
+Elastic Beanstalk: Less management.. Managed by AWS.. We need to deliver the DATA, based on Developement programing language, we need to choose the paltform.
+
+AWS automatically creates all the required resources i.e; s3 bucket, SG, ec2, ELB, ASG..
+
+PaaS : 
+Application
+Data
 
 
 
+Task : Crack Windows Administrator password using Systems Manager "run command" option.
+
+Task 2 : Install only security updates on your Linux ec2 instance.
+
+Task 3 : Install putty application on your windows ec2 instance using SSM. 
+
+Task 4 : Make linux instance as a webserver and deliver the webpage.
 
 
-
-
+__________________________________________________________________________________
 
 
 

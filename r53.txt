@@ -9,12 +9,70 @@ Elbs : DNS Name :
 DNS : maps (FQDN) Domain names to IP Address and vice versa.. 
 Public IP: Unique across the globe.. 
 
-
 Domain Registrers: GOdaddy, aws r53, google dns..  
 ICANN : Domain uniqueness.. 
 IANA : Maintains rootzoneDB..  .com, .in, .gov, .us.. 
+whois db : gives information about current domain owner..
 
 freenom.com : Where you can get a free domain name.. 
+
+learnaws.co.in  --> WHo is your domain registrer..??	AWS  
+
+godaddy/bigrock/freenon/googledns --> NS Servers need to configured in 3rd party domain registeres..
+
+
+Domain Name = Hosted Zone 
+
+
+DNS Records:
+SOA : Start of Authority Record : Zone Admin information, TTL values.. 
+NS : Name Server records .. We need to configure at Domain registrers..
+
+A : Address Record :  IP <-->Name
+Alias Record : AWS owned record : We always use A + Alias record..
+AAAA : IPv6 A record
+CNAME : Cananical Name : Domain redirections.. fb.com --> m.fb.com
+MX Record : Mail Exchange Record 
+
+Learnaws.co.in
+
+S3 Static web hosting
+Web Server
+
+
+Simple RP
+Weighted RP
+Latency RP
+Failover RP
+GeoLocation RP
+MultiValue Answer RP
+
+
+DNS Modification : Min 300 Sec
+
+Flush DNS : ipconfig /flushdns
+Modify DNS servers.. 
+
+
+Hostedzone / 0.50$/Month
+Domain Name : Appeox, 200INR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

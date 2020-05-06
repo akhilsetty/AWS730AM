@@ -1,0 +1,71 @@
+D: 06/05/2020
+
+VPC : 
+
+IPv4 : 32 Bit : 2^32 : 
+IPv6 : 128 bit : 2^128
+
+IPv4 : 
+Public IP Address : 
+Private IP Address : 
+
+Class	 Octet		Default Mask	  Network		Host
+Class A : 1-126   : 255.0.0.0 /8	: 126 		:	16,777,216
+CLass B : 128-191 : 255.255.0.0 / 16	: 16,384	:	65,536
+CLass C : 192-223 : 255.255.255.0 /24	: 2,097,150 	: 	256
+
+Class D : 224-239 : Multicasting
+Class E : 240-254 : R&D
+
+127 : loopback / Localhost
+
+
+Private IP Address:
+Class A : 10
+Class B : 172
+Class C : 192
+
+CLASS A: 10.0.0.0 to 10.255.255.255		: N.H.H.H : 
+CLASS B: 172.16.0.0 to 172.31.255.255		: N.N.H.H : 
+CLASS C: 192.168.0.0 to 192.168.255.255		: N.N.N.H : 
+
+Network : 
+Host : 
+
+IPv4 : 32 Bit : 2^32
+
+/32	/31	/30	/29	/28	/27	/26	/25	/24	/16	... /0
+
+2^0	2^1	2^2	2^3	2^4	2^5	2^6	2^7	2^8	2^9 	....
+
+1	2	4	8	16	32	64	128	256	65536	.... 
+
+
+/28 : 16 - 5  : 11 Usable IPs
+/24 : 256 - 5 : 251 Usable IPs
+/16 : 65536 - 5 : 65531 Usable IPs
+
+AWS Reserves the 5 IP Addresses... 1 : Network ID, 1: Broadcost ID, 2 : DNS Servers..  
+					1 Future use
+_______________________________________________________________________________________
+
+VPC : Virtual Private Cloud : 
+
+Default VPC : 
+--> userfriendly
+--> We cannot change the IP Range. 
+--> All are public SUbnets : Internet facing subnet.. 
+
+
+Private Subnet : Non-internet facing subnet 
+
+CustomVPC : 
+--> We can choose our required IP range. 
+--> We can create Public subnet / Private subnet based on our Requirement.
+
+
+
+
+
+
+ 

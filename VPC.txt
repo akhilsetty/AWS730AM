@@ -63,6 +63,86 @@ CustomVPC :
 --> We can choose our required IP range. 
 --> We can create Public subnet / Private subnet based on our Requirement.
 
+________________________________________________________________________________________
+
+D: 07/05/2020
+
+ap-south-1a --> Public Subnet	: web
+ap-south-1b --> Private Subnet	: Web / App / Db
+
+
+Step 1: Create a VPC : CustomVPC : CIDR: 192.168.0.0/16
+
+Step 2 : Create Subnets under CUstomVPC
+	Public SUbnet : publicsubnet : cidr: 192.168.1.0/24 : ap-south-1a
+	Private SUbnet : Privatesubnet : cidr : 192.168.2.0/24 : ap-south-1b
+
+Step 3 : Create an Internet Gateway and associate with CustomVPC.
+
+Step 4 : Create a New Route Table. 
+	--> Route : Add : 0.0.0.0/0 --> InternetGateway
+	-> SUbnet Association : PublicSUbnet : ap-south-1a
+
+Main Route Table : Whatever the Subnets we create, Those automatically part of the Main RT.
+
+Jump Server / Bastian Host : Dedicated ec2 instance runs in CustomVPC PublicSubnet, to get connect to Private Subnet Instances. 
+
+Step 5 : (optional) : Enable "Auto Assign Public IP" settings on Oublic Subnet.
+
+Launch Instance in Public SUbnet and Private Subnet. Connect to Public Subnet instance from your local device. From public subnet instance, connect to private subnet instance.
+
+
+
+NAT : Network Address Translator : Converting public IPs to Private IPs and vice versa..
+
+NAT Instance / Gateway : Designed to provide Internet connectivity to all Private subnet ec2 instance. It always runs in Public Subnet.
+
+NAT Gateway : 
+--> Designed to provide internet to Private subnet instances.
+--> ALways runs in CustomVPCs Public SUbnet.
+--> Edit the route tables accordingly.
+	--> Select the Main Route Table. Navigate to Routes... 
+	--> 0.0.0.0/0 --> NAT Gateway.
+
+NAT INSTANCE : 
+--> This is an ec2 instance designed to provide internet to Private subnet instances.
+--> Always need to runs in CustomVPC Public Subnet.
+--> We need to Disable "Source/Destination check"
+--> Edit the route tables accordingly.
+	--> Select the Main Route Table. Navigate to Routes... 
+	--> 0.0.0.0/0 --> NAT Instance.
+
+--> We needs to takes care about the Security Group. 
+
+Task : Create a VPC with Public SUbnet and Private SUbnet.
+
+Using NAT Instance, Provide internet to Private subnet ec2 instances.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

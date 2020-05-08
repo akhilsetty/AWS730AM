@@ -119,6 +119,26 @@ Task : Create a VPC with Public SUbnet and Private SUbnet.
 Using NAT Instance, Provide internet to Private subnet ec2 instances.
 
 
+_______________________________________________________________________________________
+
+D: 08/05/2020
+
+
+VPC FLowLogs : 
+--> S3
+--> Cloudwatch Log Group
+
+NACL: Network Access Control Lists:
+--> Stateless : We need to takes care about the Inbound rules and outbound rules.
+--> We can allow / deny the traffic.
+--> We may need to open the Ephemeral ports (Based on OS/application) (1025-65356)
+
+
+
+
+
+
+
 
 
 

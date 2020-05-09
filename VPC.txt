@@ -134,6 +134,63 @@ NACL: Network Access Control Lists:
 --> We may need to open the Ephemeral ports (Based on OS/application) (1025-65356)
 
 
+2000-2050
+
+_____________________________________________________________________________________
+
+D: 09/05/2020
+
+VPC Peering : 
+
+		VPC Requester			VPC Accepeter
+VPC-ID		vpc-0fd7706aa29e86e5e		vpc-02cae565
+CIDR 		192.168.0.0/16			172.31.0.0/16
+AWS Account	Acc 1				Acc 2
+Region		ap-south-1			us-east-1	
+
+
+Endpoints : Without internet access, if you want to get data from s3 bucket to out private subnet instances we use this Gateway endpoints.
+--> S3
+--> DynamoDB
+
+
+VPN COnnectivity : 
+
+AWS provides site-to-site VPN connection.. 
+Step 1 : Create Customer Gateways with Organisation Public IP
+Step 2 : Create a Virtual Private Gateways (BGP)
+Step 3 : Create a Site-to-Site VPN Connections using Customer Gateway and Virtual private gateway we created in step 1 &2.
+
+Step 4 : Download the configuration file based on our organisation's Firewall Manifacturer, share it with Firewall/Security team.
+
+________
+
+VPN with 3rd party application: Openvpn
+
+
+Ipv4 : Private subnets will get internet with NAT Instance/NAT Gateway.
+IPv6 : Egress only Internet Gateway provides internet to Private subnet intances.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,59 @@
+RDS : Relational Database Service
+
+AWS RDS Supports 6 Relational DB Engines.
+--> Amazon Aurora	: 
+--> Mysql		: Mysql workbench
+--> PostGreSQL		: PgAdmin
+--> MariaDB		: Workbench
+--> Oracle DB		: Toad
+--> MS Sql		: SSMS (SQL server management studio)
+
+NoSQL Database : Serverless : DynamoDB
+Datawaresousing : Amazon RedShift
+In Memory Caching : Elasticache (MemcacheD & Redis)
+
+License : 
+--> Li
+--> General Public License
+--> BYOL
+
+
+We won't get any IP Address for RDS instances. We willg et Endpoints. 
+
+
+LAMP : Linux , Apache, Mysql, Php : 
+
+
+Multi-AZ Deployment :
+
+ReadReplica :
+
+Backup : Snapshot : 
+--> Automated backup/ss : Creates automatically whwen ever we performs any major operations on our DB. We cannot delete these automated ss. When we delete DB instance, all automated ss will delete aitomatically.
+
+--> Manual ss : We need to create manually. Along with DB , these will not delete, We need to delete manually.
+
+
+Task : Complete the WP task
+
+Task 2 : Launch MSSQL in RDS, Launch an instance in public subnet, install SSMS and get connect to MSSQL db.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

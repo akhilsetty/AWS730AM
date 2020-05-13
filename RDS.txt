@@ -38,6 +38,85 @@ Task : Complete the WP task
 
 Task 2 : Launch MSSQL in RDS, Launch an instance in public subnet, install SSMS and get connect to MSSQL db.
 
+_______________________________________________________________________________________
+
+D: 13/05/2020
+
+
+Amazon Aurora :
+--> Amazon Aurora with MySQL compatibility
+--> Amazon Aurora with PostgreSQL compatibility
+
+Database Location : 
+Regional :You provision your Aurora database in a single AWS Region.
+Global : You can provision your Aurora database in multiple AWS Regions. Writes in the primary AWS Region are replicated with typical latency of less than 1 sec to secondary AWS Regions.
+
+
+One writer and multiple readers :
+Supports multiple reader instances connected to the same storage volume as a single writer instance. This is a good general-purpose option for most workloads.
+
+
+
+
+Restore from S3 : 
+
+DMS : Database Migration Service : 
+
+Homogenious Migration : MySql (on-prem) --> DMS --> MySql (aws)
+Heterogenious migration : MongoDB (on-prem) --> SCT (Schema COnvertion Tool) --> DMS --> 			  MySQL/PostgreSQL/Aurora
+
+
+Percona xtrabackup : Tool to take on-premise db backup, and upload it to an s3 bucket.. Later use "Restore from s3" feature. 
+
+______
+
+NoSQL : ServerLess Architecture : DynamoDB : 
+
+--> single-digit millisecond latency at any scale.
+--> great fit for mobile, web, gaming, ad-tech, IoT, and many other applications.
+
+DAX: Dynamodb Accelerator : In-Memory Caching for SynamoDB table.. 
+
+
+DynamoDB : We can deliver Tic-Tac-Toe application.. 
+
+
+Usercase : Dynamodb, Benastalk, roles, git, cli, pip
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
+
+
+____
+
+AWS Datawarehousing : Amazon Redshift : 
+--> SSD
+--> VPC/SG
+--> Snapshot
+____
+
+InMemory Cahing for RDS : Elasticache
+--> MemcacheD
+--> Redis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

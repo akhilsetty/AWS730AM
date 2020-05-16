@@ -58,6 +58,47 @@ https://aws.amazon.com/getting-started/hands-on/build-wordpress-website/
 Static Website using Cloudfront Distribution:
 https://aws.amazon.com/getting-started/hands-on/host-static-website/
 
+________________________________________________________________________________________
+
+D: 15/05/2020
+
+AWS ColudTrail : 
+--> Enabled by defaultly. Stores last 90 days activities.
+--> We need to create a TRAIL to store all the data for unlimited days. S3 bucket is used to store the data.
+
+Management events are records of actions that are performed on or within resources in your AWS account
+
+Data events are records of resource operations performed on or within a resource. S3 and Lambda comes into Data events. 
+
+Totalcloud.io/ logz.io / DataDog / Cloudcheckr / Splunk.. 
+
+Service control policies (SCPs) : Manages multiple AWS accounts using aws organizations.
+
+AWS Config : Inventory service on AWS account.. We will get resource timelines, configuration timelines to track all changes happening on all the resources.
+
+AWS Inspector: 
+
+WAF : Web Application Firewall : 
+--> Application Load Balancer
+--> CloudFront Distribution
+
+AWS Shield Advanced : TO protect AWS environment from DDoS attacks. 
+
+
+
+https://avinash69.s3.ap-south-1.amazonaws.com/test1.pdf
+
+
+_____________________________________________________________________________________
+
+D: 16/05/2020
+
+
+
+
+
+
+
 
 
 

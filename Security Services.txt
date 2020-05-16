@@ -93,13 +93,91 @@ ________________________________________________________________________________
 
 D: 16/05/2020
 
+SQS : Simple Queue Service : 
+POll / Pull based.. 
+
+--> Standard Queue :
+--> FIFO QUeue : 
+
+1. Mobile streaming application : Free customers & paid customers
+2. Restro table reservation system : 
+
+Default Visibility Timeout : The length of time (in seconds) that a message received from a queue will be invisible to other receiving components. : 30 seconds
+Min 0 seconds and Max 12 hours.
+
+Message Retention Period : The amount of time that Amazon SQS will retain a message if it does not get deleted. Default : 4 days
+MIn 1 minute and Max 14 days.
+
+Maximum message size (in bytes) accepted by Amazon SQS.
+Max MSG Size : 256 KB
+We'll get charged as Chunks (1 chunk = 64 kb).. 
+
+Delivery Delay
+The amount of time to delay the first delivery of all messages added to this queue.
+0 seconds
+Min 0 seconds and Max 15 minutes.
+
+Receive Message Wait Time
+The maximum amount of time that a long polling receive call will wait for a message to become available before returning an empty response.
+0 seconds
+Min 0 and Max 20 seconds.
 
 
 
 
+SNS : Simple Notifications Service : 
+Push Based : 
+
+SNS also supports push notifications. Based on OS also, we can configure notifications. 
+
+__
+
+SES : Simple Email Service : 
+
+Bulk emails : AWS Pinpoint along with SES.. 
+
+________
+
+
+Lambda : Serverless :  
+
+Canary FUnction : 3.7
 
 
 
+EBS VOlume Status:
+________________________________________________________________________________________
+
+import boto3
+import json
+
+client=boto3.client('ec2')
+sns = boto3.client('sns')
+sns_topic = "arn:aws:sns:ap-south-1:518084852393:S3Notifications"
+sns_subject =  "Un-attachedbin use EBS Volumes"
+Non_Compliant=[]
+tags = {}
+
+def lambda_handler(event, context):
+    result = client.describe_volumes( Filters=[{'Name': 'status', 'Values': ['available']}])
+    msg = "Hi Team," + "\n" + "Below is the list of available status Volumes details" + "\n"
+    for volume in result['Volumes']:
+        for tag in volume['Tags']:
+            tags[tag['Key']] = tag['Value']
+            #print(tags)
+        if 'avlexception' in tags:
+            print('Compliant volume',volume['VolumeId'])
+        else:
+            print('Non Compliant Volume/Not attached'+ volume['VolumeId'])
+            noncompliant='Non Compliant Volume id %s' %volume['VolumeId']
+            Non_Compliant.append(noncompliant)
+            msg = msg + "\n" + noncompliant
+            sns.publish(TopicArn='arn:aws:sns:ap-south-1:518084852393:S3Notifications', Message = "\n" + msg, Subject='EBS Volume in available status')
+    # return Non_Compliant
+
+_________________________________________________________________________________________
+
+https://www.youtube.com/watch?v=8gfSS-ZIulQ
 
 
 

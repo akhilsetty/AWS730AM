@@ -179,6 +179,82 @@ ________________________________________________________________________________
 
 https://www.youtube.com/watch?v=8gfSS-ZIulQ
 
+_________________________________________________________________________________________
+
+D: 18/05/2020
+
+Cloudformation : Infrastructure automation service.. Run "INfra as a Code".
+Supports 2 Scripting Languages:
+--> JSON (Java script object notation)
+--> YAML (Yet another markup language)
+
+Create a Stack (group of resource), and deploy the stack in CFT, All the resources creates automatically.
+
+___
+https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU
+
+boto3
+
+______________
+
+EMR : Elastic Map Reduce : Run our Bigdata workloads on EMR service.
+
+
+Docker : 
+
+ECS : Elastic COntainer Service :
+EKS : Elastic Kubernates Service :
+
+_____________________________________________________________________________________
+
+D: 19/05/2020
+
+CI/CD: 
+
+
+AWS Pricing Calculator : 
+
+TCO Calc: TOtal cost of ownership : 
+
+Capitqal expendature 
+Operational expendature 
+
+AWS 5 Advantages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

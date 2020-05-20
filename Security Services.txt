@@ -220,6 +220,56 @@ Capitqal expendature
 Operational expendature 
 
 AWS 5 Advantages
+______________________
+
+Placement group: If your ec2 instance required Low Network Latency and High Network thoughput, We use this placement groups. 
+
+Cluster placement groups: Group in a single cluster
+Partition placement groups : partion 1 , 2, 3 .. group as partionins
+Spread placement groups : instances
+
+________________________
+
+Key type: 
+Key alias Name
+Key Administrators
+Key users : 
+
+
+AWS Well Architected Framework: 
+
+--> Pillar priority
+Security
+Reliability
+Operational Excellence
+Performance Efficiency
+Cost Optimization
+
+
+--> Want to impliment in AD in AWS : Directory Servcies
+--> On-Premise AD with AWS Environment : AD Connector
+--> AWS Cognito : use an external identity provider like Facebook or Google. 
+
+Want to integrate with on-Premise Identity providers : SAML (Secure Assumption Markup language) Provider.. 
+
+AWS Storage Gateway: VMWare / Video  (SysOps)
+
+
+https://avinash69.s3.ap-south-1.amazonaws.com/share.zip
+
+
+
+
+1 week prior Write an email.. With Exam confirmation.. 
+
+
+30-45 days : 2 Hours : 
+
+
+
+
+
+
 
 
 

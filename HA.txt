@@ -1,0 +1,75 @@
+S3 : Same Region Replication / CRR.. Versioning (DR) + MFA Delete.. 
+
+EC2 :   (AZ + AZ) + ASG --> ELB --> Cloudfront --> WAF (Web Application Firewall) 
+				--> GLobal Accelerator
+ELB Needs to deliver using Fixed IP addresses: Firewall, WHitelist.. : Network ELB
+
+	ec2 --> Need to access S3 : Always use Roles 
+		(--> Ec2 in Private subnet w/o internet: Gateway endpoints)
+
+Route53 : 
+--> Latency RP : We need application in multiple Regions.. 
+--> Weighted RP : Whenever multiple versions of app.. 
+--> Failover RP : Primary --> app + Secondary (s3 static)
+
+--> We use "Alias" record : s3bucket, elb, cft, beanstalk
+
+VPC : 
+--> Always create min of 2 AZs/ Subnets.. 
+--> IGW 
+--> NAT gateway : Providing internet to privaten subnet instances, Always runs in Public Subnets, TO patch. download anything from external endpoints.. We can run/add multiple NAT gateways to a VPC.. 
+VPC Peering : TO enable communication between multiple VPCs..
+Transit Gateway : We are using VPC peering, becoming complex when VPC count is increasing.. 
+
+RDS : 
+--> MultiAZ : One AZ down also, Should not get effected.. 
+--> ReadReplica : Heavy read operations..     
+	Primary: Application / RR: Generating report.. 
+--> gaming / Iot / ad-tech / Single DIgit ms latency : DynamoDB
+--> Caching :   RDS--> Elasticache / DynamoDB --> DAX
+--> Aurora have a feature : Global Database.. 
+
+SQS : Decoupled appication.. Long Polling / short polling.. DeadLetter Queue.. 
+
+FSx : Windows Instances : SMB protocol : Can be integrated with AD : 
+EFS : Linux Instances : NFS Protocol : 
+Storage Gateway : 
+
+Kinesis : Shards/streams/analysis.. 
+
+
+
+
+File Gateway
+--> For flat files, stored directly on S3. 
+
+Volume Gateway 
+--> Stored Volumes - Entire Dataset is stored on site and is asynchronously backed up to S3. 
+--> Cached Volumes - Entire Dataset is stored on S3 and the most frequently accessed data is cached on site. 
+
+Gateway Virtual Tape Library (VTL) 
+--> Back up your data to Amazon S3 and archive in Amazon Glacier using your existing tape-based processes. Supports popular backup applications like NetBackup, Backup Exec, Veeam etc. 
+
+
+SG Mechanism : 
+
+EFS --> EC2 (SG) EFS (SG)
+RDS --> Ec2 (sg) RDS (SG)
+ --> RDS --> ec2--> ELB
+
+ELB/NAT/Bastian/Jump : Public Subnet
+Web Servers : Private 
+Db :  private Subnet
+
+
+
+
+
+
+
+
+
+
+
+
+
